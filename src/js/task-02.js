@@ -17,6 +17,6 @@ const ingList = ingredients.map(el => {
   elList.textContent = el;
   return elList;
 });
-console.log(...ingList);
+// console.log(...ingList);
 ingredientsSelector.append(...ingList);
 

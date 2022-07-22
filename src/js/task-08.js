@@ -5,7 +5,7 @@ formEl.addEventListener('submit', handleSubmit);
 
 function handleSubmit(event) {
     event.preventDefault();
-    console.log(event.currentTarget.elements);
+    // console.log(event.currentTarget.elements);
     const {
         elements: { email, password }
     } = event.currentTarget;
@@ -13,7 +13,10 @@ function handleSubmit(event) {
     if (email.value === "" || password.value === "") {
     return alert("Please fill in all the fields!");
     }
-    
-    console.log(`Login: ${email.value}, Password: ${password.value}`);
+  const objInfo = {
+    login: email.value,
+    password: password.value
+  };
+  console.log(objInfo);
   event.currentTarget.reset();
 }
